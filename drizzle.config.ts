@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     uri: env.DATABASE_URL,
   },
-  tablesFilter: ["modern-react_*"],
+  tablesFilter: ["modern_react_*"],
 } satisfies Config;

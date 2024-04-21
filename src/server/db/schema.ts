@@ -16,7 +16,7 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = mysqlTableCreator((name) => `modern-react_${name}`);
+export const createTable = mysqlTableCreator((name) => `modern_react_${name}`);
 
 export const posts = createTable(
   "post",
@@ -30,5 +30,5 @@ export const posts = createTable(
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
