@@ -11,7 +11,7 @@ source: https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Tidy up build process
 - [x] Actually set up a database (railway mysql)
 - [x] Attach database to UI
-- [ ] Add authentication (w/ clerk)
+- [x] Add authentication (w/ clerk)
 - [ ] Add image upload
 - [ ] "taint" (server-only)
 - [ ] Use Next/Image component
