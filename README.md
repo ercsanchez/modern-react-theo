@@ -10,7 +10,7 @@ source: https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Scaffold basic ui with mock data
 - [x] Tidy up build process
 - [x] Actually set up a database (railway mysql)
-- [ ] Attach database to UI
+- [x] Attach database to UI
 - [ ] Add authentication (w/ clerk)
 - [ ] Add image upload
 - [ ] "taint" (server-only)
