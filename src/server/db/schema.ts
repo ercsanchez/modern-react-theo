@@ -3,9 +3,9 @@
 
 import { sql } from "drizzle-orm";
 import {
-  bigint,
   index,
   mysqlTableCreator,
+  serial,
   timestamp,
   varchar,
 } from "drizzle-orm/mysql-core";
@@ -18,11 +18,12 @@ import {
  */
 export const createTable = mysqlTableCreator((name) => `modern_react_${name}`);
 
-export const posts = createTable(
-  "post",
+export const images = createTable(
+  "image",
   {
-    id: bigint("id", { mode: "number" }).primaryKey().autoincrement(),
-    name: varchar("name", { length: 256 }),
+    id: serial("id").primaryKey(),
+    name: varchar("name", { length: 256 }).notNull(),
+    url: varchar("url", { length: 256 }).notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
