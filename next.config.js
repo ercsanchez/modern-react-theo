@@ -5,6 +5,15 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+
+// ts and eslint checks can be done via github actions (prior to vercel deployment) to shorten vercel build time
 
 export default config;
