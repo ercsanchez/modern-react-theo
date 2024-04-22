@@ -1,5 +1,8 @@
 import "~/styles/globals.css";
 
+//  UPLOADTHING STYLES | ALTERNATIVE TO TAILWIND WRAPPER
+// import "@uploadthing/react/styles.css";
+
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import TopNav from "./_components/topnav";
