@@ -22,7 +22,6 @@ export const ourFileRouter = {
       if (!user.userId) throw new UploadThingError("Unauthorized");
 
       // Whatever is returned here is accessible in onUploadComplete as `metadata`
-      // return { userId: user.id };
       return { userId: user.userId };
     })
     .onUploadComplete(async ({ metadata, file }) => {
@@ -31,7 +30,9 @@ export const ourFileRouter = {
 
       console.log("file url", file.url);
 
-      await db.insert(images).values({ name: file.name, url: file.url });
+      await db
+        .insert(images)
+        .values({ name: file.name, url: file.url, userId: metadata.userId });
 
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
       return { uploadedBy: metadata.userId };
